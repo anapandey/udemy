@@ -1,0 +1,805 @@
+
+<!doctype html>
+<html>
+<head>
+      <title>NatGeoClone</title>
+			<meta charset="utf-8"/>
+      <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+<style type="text/css">
+body {
+font-family:"Helvetica, Arial, sans-serif";
+margin:0;
+line-height:16px;
+}
+#topbar {
+ width:100%;
+ height:120px;
+ background-color:black;
+}
+#fixedwidth {
+ width:1080px;
+ height:3200px;
+ margin:0 auto;
+}
+#logo {
+ margin-top:-30px;
+ float:left;
+}
+#connect {
+ width:65px;
+ height:40px;
+ margin-left:200px;
+ padding-top:20px;
+ color:#868989;
+ font-size:0.9 em;
+ float:left;
+}
+#facebook {
+ width:90px;
+ height:40px;
+ margin-top:12px;
+ float:left;
+}
+#facebook img {
+ width:32px;
+}
+#search {
+  padding-top:12px;
+	float:left;
+}
+#search input {
+ border:none;
+ border-radius:3px;
+ font-size:0.9em;
+ color:#868989;
+ padding:8px;
+ background-color:#3D3D3D;
+ background-image:url('http://previewsworld.com/Content/images/icons/icon-search.png');
+ background-repeat:no-repeat;
+ background-position:right;
+}
+#signin {
+ margin:12px 0 0 120px;
+ padding:8px;
+ border: 1px outset grey;
+ border-radius:5px;
+ background-color:black;
+ color:grey;
+ float:left;
+}
+#signin:hover {
+ background-color:#3D3D3D;
+ color:#D5D5D3;  
+}
+#menubar {
+ width:1020px;
+ height:40px;
+ margin-top:-30px;
+ margin-left:30px;
+ float:left;
+ border-top:ridge 1px #3D3D3D;
+}
+#menubar ul {
+ margin:0;
+ color:white;
+}
+#menubar li {
+ position:relative;
+ left:-40px;
+ padding:8px 10px 15px 8px;
+ float:left;
+ list-style:none;
+ font-size:1.2em;
+} 
+#news:hover {
+ background-color:#E9CE08;
+ color:#3D3D3D;
+}
+#video:hover {
+ background-color:#E9CE08;
+ color:#3D3D3D;
+}
+#photography:hover {
+ background-color:#E9CE08;
+ color:#3D3D3D;
+}
+#magazine:hover {
+ background-color:#E9CE08;
+ color:#3D3D3D;
+}
+#environment:hover {
+ background-color:#E9CE08;
+ color:#3D3D3D;
+}
+#travel:hover {
+ background-color:#E9CE08;
+ color:#3D3D3D;
+}
+#adventure:hover {
+ background-color:#E9CE08;
+ color:#3D3D3D;
+}
+#tv:hover {
+ background-color:#E9CE08;
+ color:#3D3D3D;
+}
+#kids:hover {
+ background-color:#E9CE08;
+ color:#3D3D3D;
+}
+#subscribe {
+ color:#E9CE08;
+}
+#subscribe:hover {
+ background-color:#E9CE08;
+ color:#3D3D3D;
+}
+#shop {
+ color:#E92D08;
+}
+#shop:hover {
+ background-color:#E9CE08;
+ color:#3D3D3D;
+}
+#headline {
+ width:960px;
+ height:50px;
+ color:#3D3D3D;
+ font-size:3.1em;
+ padding:150px 10px 0 10px;
+ margin:0 5px 0 35px;
+ border-bottom:1px solid #C6C6C0;
+}
+#body {
+ width:650px;
+ height:250px;
+ margin:20px 10px 0 35px;
+ background-image:url("http://www.nationalgeographic.com/content/dam/travel/rights-exempt/Travel-2016/nat-geo-travels/maldives/huts-maldives-blue-water.ngsversion.1468523768018.jpg");
+ background-size:650px 360px;
+ background-repeat:no-repeat;
+ padding:180px 25px 0 25px;
+ font-size:1.2em;
+ color:white;
+}
+#coverphoto {
+ width:590px;
+ height:100px;
+ margin:15px 25px 0 5px;
+ padding-top:5px;
+ border-bottom:1px solid white;
+}
+#link {
+ height:20px;
+ width:80px;
+ color:yellow;
+ position:relative;
+ top:-10px;
+ left:5px;
+}
+.right {
+    position:absolute;
+    right: 700px;
+    width: 180px;
+		margin-top:-30px;
+}
+.circle {
+ position:relative;
+ width:16px;
+ height:16px;
+ border-radius:8px;
+ background-color:white;
+ color:blue;
+ font-size:0.8em;
+ margin:5px;
+ float:left; 
+}
+#rightbar {
+ position:relative;
+ top:-348px;
+ left:345px;
+ float:right;
+ width:350px;
+ height:410px;
+ border-left:1px solid #C6C6C0;
+}
+.bullet {
+ width:10px;
+ height:16px;
+ margin-right:10px;
+}
+#wrapper-top {
+ height:250px;
+ width:290px;
+ margin: 30px 0 0 18px;
+ border-top:1px solid #C6C6C0;
+ border-bottom:1px solid #C6C6C0;
+ font-size:0.7em;
+}
+#header {
+ font-weight:bold;
+ font-size:1.3em;
+}
+a:link{
+text-decoration:none;
+color:#0B508A;
+}
+a:hover {
+ text-decoration:underline;
+}
+#box {
+ height:140px;
+ width:260px;
+ border-radius:20px;
+ background-color:#FEF9EF;  
+ padding:10px 8px 5px 8px;
+}
+#button-up {
+ height:20px;
+ width:250px;
+ background-color:#E9CE08;
+ margin-bottom:9px;
+ border-radius:8px;
+ color:black;
+ font-size:1.2em;
+ padding:10px 0 5px 10px;
+}
+#button-up img {
+ float:right;
+}
+#button-down {
+ height:20px;
+ width:250px;
+ background-color:#E9CE08;
+ margin-bottom:9px;
+ border-radius:8px;
+ color:black;
+ font-size:1.2em;
+ padding:10px 0 5px 10px;
+}
+#button-down img {
+ float:right;
+}
+#wrapper-bottom {
+ height:100px;
+ width:290px;
+ margin-left:20px;
+ border-bottom:1px solid #C6C6C0;
+ color:#393939;
+ font-size:1em;
+ font-weight:bold;
+ margin-top:-5px;
+}
+#media  {
+ margin:-15px 0 0 25px;
+}
+#outline-left {
+ width:440px;
+ height:1870px;
+ position:relative;
+ top:-375px;
+ left:30px;
+ float:left;
+ border-top:1px solid #C6C6C0;
+}
+#content-left {
+ width:440px;
+ height:1600px;
+ margin:20px 0 20px 0;
+ float:left;
+ color:#393939;
+ font-size:1em;
+ margin-top:-10px;
+ padding-top:5px;
+}
+#content-left p {
+ padding-left:180px;
+}
+.subject {
+ font-weight:bold;
+}
+.coverline {
+ font-size:1em;
+}
+.leftimage {
+ width:160px;
+ height:120px;
+}
+#leftfirst {
+ width:400px;
+ height:210px;
+ margin-top:5px;
+ float:left;
+ border-bottom:1px solid #C6C6C0;
+}
+#leftfirst img {
+  margin-top:-95px;
+}
+#leftsecond {
+ width:400px;
+ height:170px;
+ margin-top:25px;
+ float:left;
+ border-bottom:1px solid #C6C6C0;
+}
+#leftsecond img {
+  margin-top:-140px;
+  margin-right:10px;
+}
+#leftthird {
+ width:400px;
+ height:170px;
+ margin-top:18px;
+ float:left;
+ border-bottom:1px solid #C6C6C0;
+}
+#leftthird img {
+  margin-top:-100px;
+  margin-right:10px;
+}
+#leftfourth {
+ width:400px;
+ height:170px;
+ margin-top:18px;
+ float:left;
+ border-bottom:1px solid #C6C6C0;
+}
+#leftfourth img {
+  margin-top:-100px;
+  margin-right:10px;
+}
+#leftfifth {
+ width:400px;
+ height:170px;
+ margin-top:15px;
+ float:left;
+ border-bottom:1px solid #C6C6C0;
+}
+#leftfifth img {
+  margin-top:-100px;
+  margin-right:10px;
+}
+#leftsixth {
+ width:400px;
+ height:170px;
+ margin-top:25px;
+ float:left;
+ border-bottom:1px solid #C6C6C0;
+}
+#leftsixth img {
+  margin-top:-105px;
+  margin-right:10px;
+}
+#leftseventh {
+ width:400px;
+ height:175px;
+ margin-top:18px;
+ float:left;
+ border-bottom:1px solid #C6C6C0;
+}
+#leftseventh img {
+  margin-top:-100px;
+  margin-right:10px;
+}
+#lefteighth {
+ width:400px;
+ height:170px;
+ margin-top:10px;
+ float:left;
+ border-bottom:1px solid #C6C6C0;
+}
+#lefteighth img {
+  margin-top:-100px;
+  margin-right:10px;
+}
+#leftninth {
+ width:400px;
+ height:170px;
+ margin-top:18px;
+ float:left;
+ border-bottom:1px solid #C6C6C0;
+}
+#leftninth img {
+  margin-top:-100px;
+  margin-right:10px;
+}
+#lefttenth {
+ width:400px;
+ height:170px;
+ margin-top:18px;
+ float:left;
+}
+#lefttenth img {
+  margin-top:-100px;
+  margin-right:10px;
+}
+#lefttenth p {
+ padding-left:180px;
+}
+#outline-right {
+ width:228px;
+ height:1920px;
+ position:relative;
+ top:-375px;
+ left:15px;
+ float:left;
+ border-top:1px solid #C6C6C0;
+}
+#content-right {
+ width:180px;
+ height:1875px;
+ float:left;
+ color:#393939;
+ font-size:0.9em;
+ font-weight:bold;
+ margin:20px 0 20px 0;
+ border-left:1px solid #C6C6C0;
+}
+.subjectright {
+ line-height:1.2;
+}
+.rightimage {
+ width:170px;
+ height:125px;
+ padding-right:15px;
+}
+#rightfirst {
+ width:200px;
+ height:240px;
+ float:left;
+ border-bottom:1px solid #C6C6C0;
+ margin:-20px 0 0 25px;
+}
+#rightsecond {
+ width:200px;
+ height:275px;
+ float:left;
+ border-bottom:1px solid #C6C6C0;
+ margin-left:25px;
+}
+#rightthird {
+ width:200px;
+ height:240px;
+ float:left;
+ border-bottom:1px solid #C6C6C0;
+ margin-left:25px;
+}
+#rightfourth {
+ width:200px;
+ height:260px;
+ float:left;
+ border-bottom:1px solid #C6C6C0;
+ margin-left:25px;
+}
+#rightfourth ul {
+ font-size:0.8em;
+ padding-left:15px;
+ margin-top:-8px;
+}
+#rightfifth {
+ width:200px;
+ height:260px;
+ float:left;
+ border-bottom:1px solid #C6C6C0;
+ margin-left:25px;
+}
+#rightfifth ul {
+ font-size:0.8em;
+ padding-left:15px;
+ margin-top:-8px;
+}
+#rightsixth {
+ width:200px;
+ height:260px;
+ float:left;
+ border-bottom:1px solid #C6C6C0;
+ margin-left:25px;
+}
+#rightseventh {
+ width:190px;
+ height:270px;
+ float:left;
+ margin-left:25px;
+}
+#galleryheader {
+ width:1110px;
+ height:60px;
+ border-top:1px solid #C6C6C0;
+ margin:-380px 5px 0 20px;
+ float:left;
+ color:#393939;
+}
+#gallery {
+ width:1080px;
+ height:180px;
+ margin:-320px 20px 0 20px;
+ float:left;
+ background-color:#393939;
+ padding:10px 20px 10px 18px;
+}
+#gallery li{
+ list-style:none;
+ font-size:0.9em;
+ color:white;
+ float:left;
+ width:128px;
+ height:100px;
+}
+#gallery img{
+ width:110px;
+ height:90px;
+}
+#whitebar {
+ width:1080px;
+ height:5px;
+ float:left;
+ margin:-100px 20px 0 20px;
+ padding:10px 20px 10px 18px;
+ border-top:1px solid #C6C6C0;
+}
+#bluebar {
+ width:1080px;
+ height:15px;
+ background-color:#80b3ff;
+ float:left;
+ margin:-80px 20px 0 20px;
+ padding:10px 20px 20px 18px;
+ border-top:1px solid #C6C6C0;
+ color:white;
+}
+#endbar {
+ width:1100px;
+ height:400px;
+ background-color:#EAEBED;
+ float:left;
+ margin:-10px 12px 0 10px;
+ padding:10px 20px 10px 18px;
+ border-top:1px solid #5B5D5D;
+}
+</style>
+</head>
+
+<body>
+<div id="container">
+ <div id="topbar">
+  <div id="fixedwidth">
+	
+<div id="logo">
+ <img src="http://www.nationalgeographic.com/content/dam/magazine/Logos/national-geographic.jpg" width="260px">
+</div>
+<div id="connect">Connect:</div>
+<div id="facebook">
+ <img src="http://www.theforgottenlair.net/wp-content/uploads/2015/01/facebook-icon.jpg">
+ <img src="http://www.theforgottenlair.net/wp-content/uploads/2015/01/twitter-side.jpg">
+</div>
+<div id="search">
+ <input type="text" placeholder="Search">
+</div>
+<button id="signin">Sign In or Join</button>
+
+<div id="menubar">
+ <ul>
+		<li id="news">News</li>
+		<li id="video">Video</li>
+		<li id="photography">Photography</li>
+		<li id="magazine">The Magazine</li>
+		<li id="environment">Environment</li>
+		<li id="travel">Travel</li>
+		<li id="adventure">Adventure</li>
+		<li id="tv">Television</li>
+    <li id="kids">Kids</li>
+		<li id="subscribe">Subscribe</li>
+		<li id="shop">SHOP</li>
+ </ul>
+</div>
+
+<div id="headline">Travel</div>
+<div id="body">
+
+ <div id="coverphoto">
+  <h3>Know Before You Go: Maldives</h3>
+	<p>Find Insider Tips for This World-Class Beach Destination</p>
+ </div>
+ <div id="link"><h5>MORE >></h5></div>
+ <div class="right"> 
+  <div class="circle">&nbsp;1</div>
+	<div class="circle">&nbsp;2</div>
+	<div class="circle">&nbsp;3</div>
+	<div class="circle">&nbsp;4</div>
+	<div class="circle" style="background-color:#E9CE08;">&nbsp;5</div>
+	<div class="circle" style="margin-left:16px;">
+	 <img src="https://www.takecontrolbooks.com/resources/0167/site/images/triangle-right-pointing.png" width="15px">
+  </div>
+ </div>
+	
+ <div id="rightbar">
+  <div id="wrapper-top">
+	 <p id="header">
+	  <img class="bullet" src="http://i18.servimg.com/u/f18/18/73/32/18/url11.jpg">
+	  <a href="target="_blank">Take a Nat Geo Trip </a>
+   </p>
+   <div id="box"	  
+	  <p style="color:#393939"> Select a destination or trip type to find a trip:</p>
+		<div id="button-up">
+		 Search by Destination
+		 <img src="http://acsa.tomtomsa.co.za/images/dropdown_arrow_icon.png" width="15px">
+		</div> 
+		<div id="button-down">
+		 Search by Trip Type
+		 <img src="http://acsa.tomtomsa.co.za/images/dropdown_arrow_icon.png" width="15px">
+		</div> 
+   </div>
+	 <p style="font-size:1.1em"><a href="target="_blank"> See All Trips >></a></p>	
+  </div>
+	<div id="wrapper-bottom">
+	 <p>
+	  <img class="bullet" src="http://i18.servimg.com/u/f18/18/73/32/18/url11.jpg">
+		Get Social with Nat Geo Travel
+   </p>
+	 <p id="media">
+	  <img src="https://33.media.tumblr.com/e2af42cf07c13e6573aca0a1f17c2dc4/tumblr_inline_n5goozE4Ub1sc7jbu.png" width="230px">
+	 </p>
+  </div> 
+ </div>
+ 
+</div>	
+
+<div id="outline-left">	
+ <div id="content-left">
+  <div id="leftfirst">
+	 <h3 style="font-weight:bold"><img class="bullet" src="http://i18.servimg.com/u/f18/18/73/32/18/url11.jpg">The Latest From National Geographic Travel</h3>
+	 <p class="subject">The Dalai Lama's guide To Happiness</p>
+	 <p class="coverline">A well-traveled Dalai Lama takes us on a journey to joy.</p>
+	 <img  class="leftimage" src="http://www.nationalgeographic.com/content/dam/travel/rights-exempt/Traveler/August-Sept2016/dalai-lama/happiness-dalai-lama-bhutan.jpg">
+  </div>
+	<div id="leftsecond">
+	 <p class="subject">Trips That Give Back</p>
+	 <p class="coverline">Travelers can take amazing journeys and benefit local communities through these three meaningful experiences.</p>
+	 <img class="leftimage" src="http://www.nationalgeographic.com/content/dam/travel/rights-exempt/Traveler/August-Sept2016/expeditions/expeditions-tanzania-maasai.jpg">
+	</div>
+	<div id="leftthird">
+	 <p class="subject">Grand Canyon: A National Treasure</p>
+	 <p class="coverline">Follow this Nat Geo photographer as he visits 59 parks in 52 weeks.</p>
+   <img  class="leftimage" src="http://static1.squarespace.com/static/564d14dfe4b0290681184a82/5747da25e32140c00f39d76a/5747da42c2ea5189e720e945/1464461693327/Grand+Canyon+National+Park+-+005.jpg">
+	</div>
+  <div id="leftfourth">
+	 <p class="subject">Portsmouth: Local Brews and Ocen Views</p>
+	 <p class="coverline">Discover a small New Hampshire town with a big personality.</p>
+	 <img  class="leftimage" src="http://www.nationalgeographic.com/content/dam/travel/rights-exempt/Travel-2016/new-hampshire/city-gallery/11_river-house-portsmouth-new-hampshire.jpg">
+	</div>
+	<div id="leftfifth">
+	 <p class="subject">Drives to Savor in Sonoma</p>
+   <p class="coverline">Follow your appetite on three taste trails in California's laid-back wine region.</p>
+	 <img  class="leftimage" src="http://www.nationalgeographic.com/content/dam/travel/rights-exempt/Traveler/june-july2016/sonoma/austin-creek-picnic-sonoma-california.jpg">
+	</div> 
+	<div id="leftsixth">
+	 <p class="subject">Nat Geo Travels: Vietnam</p>
+	 <p class="coverline">A National Geographic staff member gives advice on food, fashion, and fun in this culturally rich country.</p>
+	 <img  class="leftimage" src="http://www.nationalgeographic.com/content/dam/travel/rights-exempt/Travel-2016/nat-geo-travels/vietnam/traffic-tourists-hanoi.adapt.768.1.jpg">
+	</div>
+	<div id="leftseventh">
+	 <p class="subject">Discover the Chocolate Capital of France</p>
+	 <p class="coverline">Cocoa hits all the sweet notes in the Basque town of Bayonne.</p>
+   <img  class="leftimage" src="http://www.nationalgeographic.com/content/dam/travel/rights-exempt/Traveler/june-july2016/bayonne-chocolate/bayonne-france-chocolate-atelier-du-chocolat.jpg">
+	</div>
+	<div id="lefteighth">
+	 <p class="subject">The Best Food Festival in Every U.S. State</p>
+	 <p class="coverline">Eat your way across America with this ultimate map of foodie celebrations.</p>
+	 <img  class="leftimage" src="http://www.nationalgeographic.com/content/dam/travel/rights-exempt/Traveler/june-july2016/food-festivals/food-festivals-map.png">
+	</div>
+	<div id="leftninth">
+	 <p class="subject">Road Trip Essentials</p>
+	 <p class="coverline">These top tips will ensure you are thoroughly prepared for your road trip adventure.</p>
+	 <img  class="leftimage" src="http://www.nationalgeographic.com/content/dam/travel/rights-exempt/Travel-2016/IT/2016-07/road-trip/road-trip-packing-luggage.adapt.768.1.jpg">
+	</div>
+	<div id="lefttenth">
+	 <p class="subject">Nat Geo Travels: Gal&#225;pagos Islands, Ecuador</p>
+	 <p class="coverline">Here's advice on getting the most out of a trip to this wildlife oasis.</p>
+	 <img  class="leftimage" src="http://images.nationalgeographic.com/wpf/media-live/photos/000/953/cache/waterfall-mashpi-galapagos_95314_160x120.jpg">
+	</div>
+ </div>
+</div>
+
+<div id="outline-right">	
+ <div id="content-right">	
+  <div id="rightfirst">
+	 <h3 class="subjectright"><img class="bullet" src="http://i18.servimg.com/u/f18/18/73/32/18/url11.jpg">Travel Photo Contest</h3>
+	 <img class="rightimage" src="http://yourshot.nationalgeographic.com/u/fQYSUbVfts-T7pS2VP2wnKyN8wxywmXtY0-FwsgxqjHQiTWqnkLm0ty7XtKaB1uKEAUqys9PUai5go7a0UHfen6COsk_
+				    -pR4Mrgw96paeFRhEHpLV1ufawUBTM7H6q7WeAaK9FiFh-MgpaRXyx9fba7VXj7KwF8n0KVgejHdsnW0VaQwHThUAyUHuP-DJzrquA1L40EsZVW2z_b2FA/">
+	 <p>See the Winners</p>
+	</div>
+	<div id="rightsecond">
+	 <h3 class="subjectright"><img class="bullet" src="http://i18.servimg.com/u/f18/18/73/32/18/url11.jpg">Nat Geo Trip of the Week</h3>
+	 <img class="rightimage" src="http://www.nationalgeographicexpeditions.com/assets/images/1008/itinerary-header.jpg">
+	 <p>Weekend Photo Workshop: New York City</p>
+	</div>
+	<div id="rightthird">
+	 <h3 class="subjectright"><img class="bullet" src="http://i18.servimg.com/u/f18/18/73/32/18/url11.jpg">Park of the Week</h3>
+	 <img class="rightimage" src="http://images.nationalgeographic.com/wpf/media-live/photos/000/929/overrides/turret-arch-arches-north-window_92950_600x450.jpg">
+	 <p>Arches</p>
+	</div>
+	<div id="rightfourth">
+	 <h3 class="subjectright"><img class="bullet" src="http://i18.servimg.com/u/f18/18/73/32/18/url11.jpg">Photos We Love</h3>
+	 <img class="rightimage" src="https://s-media-cache-ak0.pinimg.com/736x/71/7d/d2/717dd276a33e3e3c409b854e3e6db490.jpg">
+	 <p>National Park Landmarks</p>
+	  <ul>
+		   <li>More Travel Pictures</li>
+		</ul>
+	</div>
+	<div id="rightfifth">
+	 <h3 class="subjectright"><img class="bullet" src="http://i18.servimg.com/u/f18/18/73/32/18/url11.jpg">Where the Locals Go</h3>
+   <img class="rightimage" src="http://www.nationalgeographic.com/content/dam/travel/rights-exempt/Traveler/August-Sept2016/rio-de-janeiro/rio-de-janeiro-brazil-ipanema-beach-sunset.ngsversion.1470236694835.adapt.945.1.jpg">
+	 <p>Rio de Janeiro, Brazil</p>
+	  <ul>
+		   <li>Submit Your City</li>
+		</ul>
+	</div>
+	<div id="rightsixth">
+	 <h3 class="subjectright"><img class="bullet" src="http://i18.servimg.com/u/f18/18/73/32/18/url11.jpg">Week's Best Travel Photos</h3>
+   <img class="rightimage" src="http://www.nationalgeographic.com/content/dam/travel/rights-exempt/Travel-2016/weeks-best-travel-photos/06-24/treptower-%E2%80%8Bpark-triathalon-berlin-germany.ngsversion.1466790031491.adapt.945.1.jpg">
+	 <p>A Start to Summer</p>
+	</div>
+	<div id="rightseventh">
+	 <h3 class="subjectright"><img class="bullet" src="http://i18.servimg.com/u/f18/18/73/32/18/url11.jpg">Sustainable Tourism</h3>
+	 <img class="rightimage" src="http://intelligenttravel.nationalgeographic.com/files/2014/07/train-travel-india-590.jpg">
+	 <p>7 Steps to Becoming a Better Traveler</p>
+  </div>				 
+ </div>
+</div>
+
+<div id="galleryheader">
+ <h3 class="subjectright">
+  <img class="bullet" src="http://i18.servimg.com/u/f18/18/73/32/18/url11.jpg">
+	More From National Geographic Travel
+ </h3>
+</div>
+				
+<div id="gallery">
+ <ul>
+    <li>
+		 <img src="http://images.nationalgeographic.com/wpf/media-live/photos/000/634/overrides/family-trips-nambia-desert_63424_600x450.jpg">
+		 <p>Best Family Trips</p>
+		</li>
+		<li>
+		 <img src="http://travel.nationalgeographic.com/u/TvyamNb-BivtNwpvn7Sct0VFDulyAfA9wBcU0gVHVnqC5ghnda8lqhWms38xeZHRs9x-xrnayWS8hWw1hoI/">
+		 <p>South Australia's Adventures of a Lifetime</p>
+	  </li>
+		<li>
+		 <img src="http://images.nationalgeographic.com/wpf/media-live/photos/000/915/custom/loggerhead-key-dry-tortugas-underwater_91596_610x343.jpg">
+		 <p>Florida's Pristine Parks</p>
+		</li>
+		<li>
+		 <img src="http://images.nationalgeographic.com/wpf/media-live/photos/000/912/overrides/bulgaria-rila-monastery-outdoor_91297_600x450.jpg">
+		 <p>From Traveler Magazine</p>
+		</li>
+		<li>
+		 <img src="http://travel.nationalgeographic.com/u/TvyamNb-BivtNwpvn7Sct0VFDulyAfA9wBcU0gVHVnqC5ghsgF4a80mdgF1URS-tiyE2FFJwqTIrDbKPpbA/">
+		 <p>World Legacy Awards</p>
+		</li>
+		<li>
+		 <img src="http://images.nationalgeographic.com/wpf/media-live/photos/000/914/overrides/bison-nation-bison-range_91443_160x120.jpg">
+		 <p>Montana's Ultimate Road Trips</p>
+		</li>
+		<li>
+		 <img src="http://images.nationalgeographic.com/wpf/media-live/photos/000/916/custom/bighorn-canyon-national-recreation-area_91696_610x343.jpg">
+		 <p>Travel Top 10s</p>
+		</li>
+		<li>
+		 <img src="http://images.nationalgeographic.com/wpf/media-live/photos/000/893/overrides/visitor-chateau-chillon_89301_100x75.jpg">
+		 <p>Switzerland's Grand Tour</p>
+		</li>
+  </ul>
+</div>
+
+<div id="whitebar"></div>
+<div id="bluebar">
+ <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Natgeoyellowsquare.svg/2000px-Natgeoyellowsquare.svg.png" width="13px">
+ National Geographic Home &#8667; <span style="color:black">Travel</span>
+</div>
+<div id="endbar"></div>
+	
+  </div>
+ </div>
+</div>
+</body>
+</html>
